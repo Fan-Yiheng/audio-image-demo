@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+}
+
+.audio-player, .image-item {
+    margin: 20px 0;
+}
+
+audio {
+    width: 100%;
+    max-width: 400px;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.image-item img {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
