@@ -1,6 +1,6 @@
 body {
     /* font-family: Arial, sans-serif; */
-    font-family:  'Helvetica';
+    font-family: 'Segoe UI';
     background-color: #fefefe;
     color: hsl(0, 0%, 20%);
     max-width: 65%; /* 设置最大宽度为80% */
@@ -70,32 +70,39 @@ footer {
 }
 
 .abstract-text {
-    font-size: 1em; /* 设置字号 */
+    font-size: 1.05em; /* 设置字号 */
     line-height: 1.5; /* 设置行间距 */
-    max-width: 80%; /* 设置最大宽度为60% */
+    max-width: 70%; /* 设置最大宽度为60% */
     margin: 0 auto; /* 居中 */
     margin-top: 0.5em; /* Set top margin to 0.5 lines */
     margin-bottom: 0.5em; /* Set bottom margin to 0.5 lines */
     text-align: justify; /* Align text to both left and right */
-}
-
-.abstract-text {
     list-style-type: none; /* 取消默认标号样式 */
     counter-reset: list-counter; /* 重置计数器 */
+    font-family: 'Segoe UI'; /* 设置字体 */
 }
 
 .abstract-text li {
     counter-increment: list-counter; /* 增加计数器 */
-    width: 90%; /* 设置列表项宽度为50% */
+    width: 93%; /* 设置列表项宽度为50% */
     margin: 0 auto; /* 居中显示列表项 */
     margin-bottom: 10px; /* 设置每个列表项的底部间距 */
     display: block; /* 使宽度生效 */
     padding-left: 0; /* 取消左侧缩进 */
+    /* font-weight: 12; 加粗列表项内容 */
 }
 
 .abstract-text li::before {
     content: counter(list-counter) ")"; /* 自定义标号样式 */
 
-    margin-right: 5px; /* 标号与文本间距 */
+    margin-right: 23px; /* 标号与文本间距 */
+    margin-left: -40px; /* 调整标号左侧缩进 */
 }
 
+
+.image-container img {
+    max-width: 100%; /* 图片宽度不超过容器宽度 */
+    height: auto;    /* 高度自动调整以保持比例 */
+    max-height: 150px; /* 设置最大高度 */
+    margin: 30px; /* 添加间距 */
+}
