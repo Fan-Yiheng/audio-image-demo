@@ -1,41 +1,101 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    /* font-family: Arial, sans-serif; */
+    font-family:  'Helvetica';
+    background-color: #fefefe;
+    color: hsl(0, 0%, 20%);
+    max-width: 65%; /* 设置最大宽度为80% */
+    margin: 0 auto;
+    padding: 20px;
+
 }
 
 header {
     text-align: center;
-    padding: 20px;
-    background-color: #4CAF50;
-    color: white;
+    margin-bottom: 20px;
 }
 
 h1 {
-    margin: 0;
+    color: #000;
+    font-size: 1.75em;
+    line-height: 1.5; /* 设置行间距 */
+    text-align: center; /* 居中对齐 */
+    width: 70%; /* 设置宽度为50% */
+    margin: 0 auto; /* 居中显示 */
 }
 
-section {
-    padding: 20px;
+
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    font-size: 1.5em
 }
 
-.audio-player, .image-item {
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin: 20px 0;
+    border: none; /* 去掉表的边线 */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border: none; /* 去掉单元格的边线 */
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100px;
+    height: auto;
 }
 
 audio {
-    width: 100%;
-    max-width: 400px;
+    width: 300px; /* 设置宽度 */
+    border: 1px solid #ccc; /* 添加边框 */
+    border-radius: 15px; /* 圆角效果 */
+    background-color: #f0f0f0; /* 背景色 */
+    outline: none; /* 去掉默认的轮廓 */
 }
 
-.image-gallery {
-    display: flex;
-    gap: 20px;
+footer {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.image-item img {
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #ccc;
+.abstract-text {
+    font-size: 1em; /* 设置字号 */
+    line-height: 1.5; /* 设置行间距 */
+    max-width: 80%; /* 设置最大宽度为60% */
+    margin: 0 auto; /* 居中 */
+    margin-top: 0.5em; /* Set top margin to 0.5 lines */
+    margin-bottom: 0.5em; /* Set bottom margin to 0.5 lines */
+    text-align: justify; /* Align text to both left and right */
 }
+
+.abstract-text {
+    list-style-type: none; /* 取消默认标号样式 */
+    counter-reset: list-counter; /* 重置计数器 */
+}
+
+.abstract-text li {
+    counter-increment: list-counter; /* 增加计数器 */
+    width: 90%; /* 设置列表项宽度为50% */
+    margin: 0 auto; /* 居中显示列表项 */
+    margin-bottom: 10px; /* 设置每个列表项的底部间距 */
+    display: block; /* 使宽度生效 */
+    padding-left: 0; /* 取消左侧缩进 */
+}
+
+.abstract-text li::before {
+    content: counter(list-counter) ")"; /* 自定义标号样式 */
+
+    margin-right: 5px; /* 标号与文本间距 */
+}
+

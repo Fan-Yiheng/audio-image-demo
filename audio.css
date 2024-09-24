@@ -1,0 +1,43 @@
+.audio-player {
+    display: flex;
+    align-items: center;
+    width: 300px; /* 控制播放器的总宽度 */
+}
+
+.play-pause {
+    width: 20px; /* 播放/暂停按钮的宽度 */
+    height: 20px; /* 播放/暂停按钮的高度 */
+    margin-right: 10px; /* 按钮与进度条之间的间距 */
+    cursor: pointer; /* 鼠标悬停时显示为可点击的指针 */
+}
+
+.progress-bar {
+    flex-grow: 1; /* 进度条占据剩余空间 */
+    height: 5px; /* 进度条的高度 */
+    background-color: #ccc; /* 进度条的背景颜色 */
+    margin: 0 10px; /* 进度条左右的间距 */
+    position: relative; /* 相对定位，用于内部的进度条调整 */
+    cursor: pointer; /* 鼠标悬停时显示为可点击的指针 */
+}
+
+.progress {
+    height: 100%; /* 使进度条与父容器（progress-bar）高度一致 */
+    background-color: #000; /* 进度条颜色 */
+    width: 0; /* 初始时进度条宽度为0，播放时根据进度更新 */
+}
+
+.time {
+    font-size: 12px; /* 时间显示的字体大小 */
+}
+
+.volume {
+    margin-left: 10px; /* 音量图标与右侧的间距 */
+    cursor: pointer; /* 鼠标悬停时显示为可点击的指针 */
+}
+.play-pause, .volume {
+    max-width: 30px; /* 限制最大宽度 */
+    max-height: 30px; /* 限制最大高度 */
+    width: auto; /* 根据内容自适应 */
+    height: auto; /* 根据内容自适应 */
+}
+

@@ -1,53 +1,122 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>示例网站</title>
+    <title>Display of Image and Voice Compression Results</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <h1>音频与图片展示</h1>
-        <p>这是一个用于展示音频文件和图片的示例网站。</p>
+        <h1>Satellite Edge Computing: Deep Learning Image and Audio Compression Transmission System Based on Narrowband Satellite Internet of Things</h1>
     </header>
 
-    <section id="audio-demo">
-        <h2>音频演示</h2>
-        <div class="audio-player">
-            <h3>音频样例 1</h3>
-            <audio controls>
-                <source src="audio/audio1.mp3" type="audio/mpeg">
-                您的浏览器不支持 audio 元素。
-            </audio>
-        </div>
-
-        <div class="audio-player">
-            <h3>音频样例 2</h3>
-            <audio controls>
-                <source src="audio/audio2.mp3" type="audio/mpeg">
-                您的浏览器不支持 audio 元素。
-            </audio>
-        </div>
+    <section>
+        <h2>Abstract</h2>
+        <p class="abstract-text">The Satellite Internet of Things (SatIoT) enables integrated space-air-ground connectivity and information exchange through satellite communication networks and sensors. It realizes the management, control and decision-making of the broader physical world through the analysis and processing of information. Its most obvious advantage is achieving global coverage, effectively addressing communication issues in signal-deficient areas. At present, SatIoT primarily focuses on transmitting text-based information. However, for a better user experience, transmitting images and audio data can provide more comprehensive and intuitive information. Limited by the satellite bandwidth, images and audio data need to be heavily compressed before transmission. However, traditional compression algorithms often result in significant blurring and distortion.</p>
+        <p class="abstract-text"> Aiming at the above problems, this paper proposes a deep learning image and audio compression transmission system based on narrowband SatIoT: </p>
+        <ol class="abstract-text">
+            <li>This paper combines the advantages of Transformer and CNN in capturing global and local features of images, proposing a deep learning-based image compression algorithm that outperforms traditional image compression algorithms in both compression ratio and image reconstruction quality.</li>
+            <li>This paper presents a deep learning-based audio compression algorithm that introduces LSTM and dilated convolutions to effectively capture the long-term dependencies in time series. At the bitrate of 0.5 kbps, our method surpasses traditional algorithms, achieving superior performance in both subjective and objective evaluations.</li> 
+            <li>Implement edge computing for the algorithms and build an SatIoT system based on the Tiantong satellite.</li> 
+        </ol>
     </section>
 
-    <section id="image-demo">
-        <h2>图片演示</h2>
-        <div class="image-gallery">
-            <div class="image-item">
-                <h3>图片 1</h3>
-                <img src="images/image1.png" alt="示例图片 1">
-            </div>
+    <section>
+        <h2>Audio Compression📢</h2>
+        <table>
+            <tr>
+                <th> </th>
+                <th>Audio 1</th>
+                <th>Audio 2</th>
+                <th>Audio 3</th>
+                <th>Audio 4</th>
+                <th>Audio 5</th>
+            </tr>
+            <tr>
+                <th>Original</th>
+                <td><audio controls><source src="./audio/Original/female1.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Original/male1.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Original/female2.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Original/male2.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Original/female3.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
 
-            <div class="image-item">
-                <h3>图片 2</h3>
-                <img src="images/image2.png" alt="示例图片 2">
-            </div>
+            </tr>
+            <tr>
+                <th>Codec2(0.7kbps)</th>
+                <td><audio controls><source src="./audio/Codec2(0.7kbps)/female1_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Codec2(0.7kbps)/male1_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Codec2(0.7kbps)/female2_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Codec2(0.7kbps)/male2_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Codec2(0.7kbps)/female3_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+
+            </tr>
+            <tr>
+                <th>Codec2(1.2kbps)</th>
+                <td><audio controls><source src="./audio/Codec2(1.2kbps)/female1_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Codec2(1.2kbps)/male1_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Codec2(1.2kbps)/female2_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Codec2(1.2kbps)/male2_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Codec2(1.2kbps)/female3_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+              
+            </tr>
+            <tr>
+                <th>LPCNet(1.6kbps)</th>
+                <td><audio controls><source src="./audio/LPCNet(1.6kbps)/female1_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/LPCNet(1.6kbps)/male1_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/LPCNet(1.6kbps)/female2_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/LPCNet(1.6kbps)/male2_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/LPCNet(1.6kbps)/female3_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+               
+            </tr>
+            <tr>
+                <th>SoundStreem(3.2kbps)</th>
+                <td><audio controls><source src="./audio/SoundStreem(3.2kbps)/female1_decoded.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/SoundStreem(3.2kbps)/male1_decoded.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/SoundStreem(3.2kbps)/female2_decoded.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/SoundStreem(3.2kbps)/male2_decoded.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/SoundStreem(3.2kbps)/female3_decoded.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+            </tr>
+            <tr>
+                
+            </tr>
+                <th>Ours</th>
+                <td><audio controls><source src="./audio/Ours/female1_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Ours/male1_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Ours/female2_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Ours/male2_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+                <td><audio controls><source src="./audio/Ours/female3_decode.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+ 
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Image Compression🏞️</h2>
+        <h3>Original Images</h3>
+        <div class="image-container">
+            <img src="path/to/image1" alt="Original Image 1">
+            <img src="path/to/image2" alt="Original Image 2">
+            <img src="path/to/image3" alt="Original Image 3">
+            <img src="path/to/image4" alt="Original Image 4">
+            <img src="path/to/image5" alt="Original Image 5">
+            <img src="path/to/image6" alt="Original Image 6">
+        </div>
+        <h3>Compressed Images</h3>
+        <div class="image-container">
+            <img src="path/to/compressed_image1" alt="Compressed Image 1">
+            <img src="path/to/compressed_image2" alt="Compressed Image 2">
+            <img src="path/to/compressed_image3" alt="Compressed Image 3">
+            <img src="path/to/compressed_image4" alt="Compressed Image 4">
+            <img src="path/to/compressed_image5" alt="Compressed Image 5">
+            <img src="path/to/compressed_image6" alt="Compressed Image 6">
         </div>
     </section>
+    
 
     <footer>
-        <p>网站由 [你的名字] 创建 &copy; 2024</p>
+        <p>&copy; 2024 Display of Image and Voice Compression Results</p>
     </footer>
 </body>
 </html>

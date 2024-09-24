@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义音频播放器</title>
+    <style>
+        .audio-player {
+            display: flex;
+            align-items: center;
+            width: 300px;
+        }
+
+        .play-pause {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .progress-bar {
+            flex-grow: 1;
+            height: 5px;
+            background-color: #ccc;
+            margin: 0 10px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #000;
+            width: 0;
+        }
+
+        .time {
+            font-size: 12px;
+        }
+
+        .volume {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="audio.css">
+</head>
+<body>
+
+<div class="audio-player">
+    <img class="play-pause" src="play-icon.png" alt="播放" id="playPauseBtn">
+    <div class="time" id="currentTime">0:00</div>
+    <div class="progress-bar" id="progressBar">
+        <div class="progress" id="progress"></div>
+    </div>
+    <div class="time" id="duration">0:00</div>
+    <img class="volume" src="volume-icon.png" alt="音量" id="volumeBtn">
+</div>
+
+<audio id="audio">
+    <source src="your-audio-file.mp3" type="audio/mpeg">
+    您的浏览器不支持 audio 元素。
+</audio>
+
+<script>
+    const audio = document.getElementById('audio');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const progressBar = document.getElementById('progressBar');
+    const progress = document.getElementById('progress');
+    const currentTimeElem = document.getElementById('currentTime');
+    const durationElem = document.getElementById('duration');
+
+    // 播放/暂停功能
+    playPauseBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.src = 'pause-icon.png'; // 切换为暂停图标
+        } else {
+            audio.pause();
+            playPauseBtn.src = 'play-icon.png'; // 切换为播放图标
+        }
+    });
+
+    // 更新进度和时间
+    audio.addEventListener('timeupdate', () => {
+        const currentTime = audio.currentTime;
+        const duration = audio.duration;
+        const progressPercent = (currentTime / duration) * 100;
+        progress.style.width = `${progressPercent}%`;
+
+        // 时间格式化为 分钟:秒
+        const formatTime = time => {
+            const minutes = Math.floor(time / 60);
+            const seconds = Math.floor(time % 60).toString().padStart(2, '0');
+            return `${minutes}:${seconds}`;
+        };
+
+        currentTimeElem.textContent = formatTime(currentTime);
+        durationElem.textContent = formatTime(duration);
+    });
+
+    // 点击进度条快进
+    progressBar.addEventListener('click', (e) => {
+        const width = progressBar.clientWidth;
+        const clickX = e.offsetX;
+        const duration = audio.duration;
+        audio.currentTime = (clickX / width) * duration;
+    });
+</script>
+
+</body>
+</html>
