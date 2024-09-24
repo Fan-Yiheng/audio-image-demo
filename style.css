@@ -1,14 +1,25 @@
 body {
-    /* font-family: Arial, sans-serif; */
     font-family: 'Segoe UI';
     background-color: #fefefe;
     color: hsl(0, 0%, 20%);
-    max-width: 65%; /* 设置最大宽度为80% */
-    margin: 0 auto;
-    padding: 20px;
-
+    margin: 0;
+    padding: 0;
 }
 
+.container {
+    position: relative;
+    width: 100vw;
+    height: 220vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    max-width: 65%; /* 保持最大宽度 */
+    width: 90%; /* 根据需要设置内容宽度 */
+    margin: 20px; /* 添加内边距 */
+}
 header {
     text-align: center;
     margin-bottom: 20px;
