@@ -30,6 +30,10 @@ h2 {
     font-size: 1.5em
 }
 
+h4 {
+    font-size: 1.3em
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -100,9 +104,65 @@ footer {
 }
 
 
-.image-container img {
-    max-width: 100%; /* 图片宽度不超过容器宽度 */
-    height: auto;    /* 高度自动调整以保持比例 */
-    max-height: 150px; /* 设置最大高度 */
-    margin: 30px; /* 添加间距 */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 100%;
 }
+
+.image-column {
+    flex: 0 0 18%;
+    /* Adjust column width */
+    margin: 5px;
+    /* Space between columns */
+    text-align: center;
+}
+
+.image-column img {
+    width: 100%;
+    /* Responsive width */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-width: 1200px;
+    /* Limit image size */
+}
+
+.image-column .bpp {
+    font-size: 18px;
+    /* Smaller font for captions */
+    margin: 0px 0;
+    margin-bottom: 0px;
+    /* 增加图片之间的间距 */
+    /* Space between lines */
+}
+
+.image-column .psnr {
+    font-size: 18px;
+    /* Smaller font for captions */
+    margin: 0px 0;
+    margin-bottom: 20px;
+        /* 增加图片之间的间距 */
+    /* Space between lines */
+}
+
+.image-column .our_bpp {
+    font-size: 18px;
+    /* Smaller font for captions */
+    margin: 0px 0;
+    margin-bottom: 0px;
+    font-weight: bold;
+    /* 增加图片之间的间距 */
+    /* Space between lines */
+}
+
+.image-column .our_psnr {
+    font-size: 18px;
+    /* Smaller font for captions */
+    margin: 0px 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    /* 增加图片之间的间距 */
+    /* Space between lines */
+}
+

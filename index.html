@@ -8,16 +8,30 @@
 </head>
 
 <body>
-    <header>
-        <img src="images/CPNT LAB.png" alt="Left Logo" class="logo" style="float:left; margin-right: 10px; width: 110px; height: auto;">
-        <img src="images/Sun_Yat-sen_Univ_Logo.png" alt="Right Logo" class="logo" style="float:right; margin-left: 10px; width: 110px; height: auto; vertical-align: middle;">
-        <h1>Satellite Edge Computing: Deep Learning Image and Audio Compression Transmission System Based on Narrowband Satellite Internet of Things</h1>
-        
-    </header>
+<header>
+    <img src="images/CPNT LAB.png" alt="Left Logo" class="logo"
+        style="float:left; margin-right: 10px; width: 130px; height: auto; margin-bottom: 10px;">
+    <img src="images/Sun_Yat-sen_Univ_Logo.png" alt="Right Logo" class="logo"
+        style="float:right; margin-left: 10px; width: 130px; height: auto; vertical-align: middle; margin-bottom: 10px;">
+    <h1 style="margin-top: 10px;">Satellite Edge Computing: </h1>
+    <h1> Deep Learning Image and Audio Compression TransmissionSystem </h1>
+    <h1>Based on Narrowband Satellite Internet of Things</h1>
+</header>
 
+
+    <style>
+        /* 添加CSS样式以调整摘要部分的顶部边距 */
+        section {
+            margin-top: 50px;
+            /* 或者更大的值，取决于您的布局需要 */
+        }
+    </style>
     <section>
         <h2>Abstract</h2>
-        <p class="abstract-text">The Satellite Internet of Things (SatIoT) enables integrated space-air-ground connectivity and information exchange through satellite communication networks and sensors. It realizes the management, control and decision-making of the broader physical world through the analysis and processing of information. Its most obvious advantage is achieving global coverage, effectively addressing communication issues in signal-deficient areas. At present, SatIoT primarily focuses on transmitting text-based information. However, for a better user experience, transmitting images and audio data can provide more comprehensive and intuitive information. Limited by the satellite bandwidth, images and audio data need to be heavily compressed before transmission. However, traditional compression algorithms often result in significant blurring and distortion.</p>
+        <p class="abstract-text">The Satellite Internet of Things (SatIoT) enables integrated space-air-ground connectivity and information exchange through satellite communication networks and sensors. 
+            It realizes the management, control and decision-making of the broader physical world through the analysis and processing of information. Its most obvious advantage is achieving global coverage,
+             effectively addressing communication issues in signal-deficient areas. At present, SatIoT primarily focuses on transmitting text-based information. However, for a better user experience, 
+             transmitting images and audio data can provide more comprehensive and intuitive information. Limited by the satellite bandwidth, images and audio data need to be heavily compressed before transmission. However, traditional compression algorithms often result in significant blurring and distortion.</p>
         <p class="abstract-text"> Aiming at the above problems, this paper proposes a deep learning image and audio compression transmission system based on narrowband SatIoT: </p>
         <ol class="abstract-text">
             <li>This paper combines the advantages of Transformer and CNN in capturing global and local features of images, proposing a deep learning-based image compression algorithm that outperforms traditional image compression algorithms in both compression ratio and image reconstruction quality.</li>
@@ -95,25 +109,86 @@
         </table>
     </section>
 
-    <section>
-        <h2>Image Compression🏞️</h2>
-        <h3>Original Images</h3>
-        <div class="image-container">
-            <img src="./images/Sun_Yat-sen_Univ_Logo.png" alt="Original Image 1">
-            <img src="./images/Sun_Yat-sen_Univ_Logo.png" alt="Original Image 2">
-            <img src="./images/Sun_Yat-sen_Univ_Logo.png" alt="Original Image 3">
-            <img src="./images/Sun_Yat-sen_Univ_Logo.png" alt="Original Image 4">
-            <img src="./images/Sun_Yat-sen_Univ_Logo.png" alt="Original Image 5">
+<section>
+    <h2>Image Compression🏞️</h2>
+    <div class="image-container">
+        <div class="image-column">
+            <h4>Ours</h4>
+            <img src="./images/Ours/reccrop1.png" alt="Ours 1">
+            <p class="our_bpp">bpp: 0.268</p>
+            <p class="our_psnr">psnr: 27.75</p>
+            <img src="./images/Ours/reccrop3.png" alt="Ours 2">
+            <p class="our_bpp">bpp: 0.228</p>
+            <p class="our_psnr">psnr: 26.86</p>
+            <img src="./images/Ours/reccrop5.png" alt="Ours 3">
+            <p class="our_bpp">bpp: 0.297</p>
+            <p class="our_psnr">psnr: 26.16</p>
+            <img src="./images/Ours/reccrop6.png" alt="Ours 4">
+            <p class="our_bpp">bpp: 0.251</p>
+            <p class="our_psnr">psnr: 29.54</p>
         </div>
-        <h3>Compressed Images</h3>
-        <div class="image-container">
-            <img src="./images/Sun_Yat-sen_Univ_Logo.png" alt="Compressed Image 1">
-            <img src="./images/Sun_Yat-sen_Univ_Logo.png" alt="Compressed Image 2">
-            <img src="./images/Sun_Yat-sen_Univ_Logo.png" alt="Compressed Image 3">
-            <img src="./images/Sun_Yat-sen_Univ_Logo.png" alt="Compressed Image 4">
-            <img src="./images/Sun_Yat-sen_Univ_Logo.png" alt="Compressed Image 5">
+        <div class="image-column">
+            <h4>Bpg</h4>
+            <img src="./images/bpg/output_bpg_crop1.png" alt="Bpg 1">
+            <p class="bpp">bpp: 0.2559</p>
+            <p class="psnr">psnr: 27.32</p>
+            <img src="./images/bpg/output_bpg_crop3.png" alt="Bpg 2">
+            <p class="bpp">bpp: 0.2241</p>
+            <p class="psnr">psnr: 25.14</p>
+            <img src="./images/bpg/output_bpg_crop5.png" alt="Bpg 3">
+            <p class="bpp">bpp: 0.3442</p>
+            <p class="psnr">psnr: 26.2731</p>
+            <img src="./images/bpg/output_bpg_crop6.png" alt="Bpg 4">
+            <p class="bpp">bpp: 0.2682</p>
+            <p class="psnr">psnr: 28.73</p>
         </div>
-    </section>
+        <div class="image-column">
+            <h4>Webp</h4>
+            <img src="./images/WebP/output_webp_crop1.png" alt="Webp 1">
+            <p class="bpp">bpp: 0.2705</p>
+            <p class="psnr">psnr: 26.0943</p>
+            <img src="./images/WebP/output_webp_crop3.png" alt="Webp 2">
+            <p class="bpp">bpp: 0.2510</p>
+            <p class="psnr">psnr: 24.3285</p>
+            <img src="./images/WebP/output_webp_crop5.png" alt="Webp 3">
+            <p class="bpp">bpp: 0.2891</p>
+            <p class="psnr">psnr: 24.6841</p>
+            <img src="./images/WebP/output_webp_crop6.png" alt="Webp 4">
+            <p class="bpp">bpp: 0.2584</p>
+            <p class="psnr">psnr: 26.9135</p>
+        </div>
+        <div class="image-column">
+            <h4>Jpeg2000</h4>
+            <img src="./images/jpeg2000/output_jpeg2000_crop1.png" alt="Jpeg2000 1">
+            <p class="bpp">bpp: 0.2360</p>
+            <p class="psnr">psnr: 25.4691</p>
+            <img src="./images/jpeg2000/output_jpeg2000_crop3.png" alt="Jpeg2000 2">
+            <p class="bpp">bpp: 0.2394</p>
+            <p class="psnr">psnr: 24.3210</p>
+            <img src="./images/jpeg2000/output_jpeg2000_crop5.png" alt="Jpeg2000 3">
+            <p class="bpp">bpp: 0.234</p>
+            <p class="psnr">psnr: 24.3573</p>
+            <img src="./images/jpeg2000/output_jpeg2000_crop6.png" alt="Jpeg2000 4">
+            <p class="bpp">bpp: 0.24</p>
+            <p class="psnr">psnr: 26.16</p>
+        </div>
+        <div class="image-column">
+            <h4>Jpeg</h4>
+            <img src="./images/JPEG/output_jpeg_crop1.png" alt="Jpeg 1">
+            <p class="bpp">bpp: 0.2561</p>
+            <p class="psnr">psnr: 22.5567</p>
+            <img src="./images/JPEG/output_jpeg_crop3.png" alt="Jpeg 2">
+            <p class="bpp">bpp: 0.2357</p>
+            <p class="psnr">psnr: 21.1260</p>
+            <img src="./images/JPEG/output_jpeg_crop5.png" alt="Jpeg 3">
+            <p class="bpp">bpp: 0.2870</p>
+            <p class="psnr">psnr: 22.6339</p>
+            <img src="./images/JPEG/output_jpeg_crop6.png" alt="Jpeg 4">
+            <p class="bpp">bpp: 0.2523</p>
+            <p class="psnr">psnr: 23.7485</p>
+        </div>
+    </div>
+</section>
     
 
     <footer>
