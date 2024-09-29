@@ -26,12 +26,21 @@ h1 {
 
 h2 {
     border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-    font-size: 1.5em
+    padding-bottom: 2px;
+    font-size: 1.5em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    /* 调整此值以减少间距 */
+}
+
+
+h3 {
+    font-size: 1.5em;
 }
 
 h4 {
-    font-size: 1.3em
+    font-size: 1.3em;
+    
 }
 
 table {
@@ -74,7 +83,7 @@ footer {
 }
 
 .abstract-text {
-    font-size: 1.05em; /* 设置字号 */
+    font-size: 1.1em; /* 设置字号 */
     line-height: 1.5; /* 设置行间距 */
     max-width: 70%; /* 设置最大宽度为60% */
     margin: 0 auto; /* 居中 */
@@ -166,3 +175,82 @@ footer {
     /* Space between lines */
 }
 
+.modal {
+    display: none;
+    /* 隐藏模态框 */
+    position: fixed;
+    /* 固定在窗口 */
+    z-index: 999;
+    /* 在最上层 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* 宽度100% */
+    height: 100%;
+    /* 高度100% */
+    overflow: auto;
+    /* 可滚动 */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* 深色透明背景 */
+    backdrop-filter: blur(5px);
+    /* 背景模糊效果 */
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+}
+
+/* 另外，添加一个单独的类来控制模态框的显示 */
+.modal.show {
+    display: flex;
+    /* 显示模态框 */
+}
+
+
+.modal-content {
+    max-width: 90%;
+    /* 最大宽度 */
+    max-height: 90%;
+    /* 最大高度 */
+    margin: 0;
+    /* 去掉外边距 */
+    display: block;
+    /* 使图片块级显示 */
+    object-fit: contain;
+    /* 确保图片保持比例 */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.caption {
+    position: absolute;
+    /* 绝对定位 */
+    top: 160px;
+    /* 距离顶部30px */
+    left: 50%;
+    /* 水平居中 */
+    transform: translateX(-50%);
+    /* 使文本居中对齐 */
+    color: white;
+    /* 字体颜色为白色 */
+    font-size: 18px;
+    /* 字体大小 */
+    text-align: center;
+    /* 文本居中对齐 */
+    z-index: 2;
+    /* 确保文本在图片上方 */
+}
