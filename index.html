@@ -27,15 +27,17 @@
     </style>
     <section>
         <h2>Abstract</h2>
-        <p class="abstract-text">The Satellite Internet of Things (SatIoT) enables integrated space-air-ground connectivity and information exchange through satellite communication networks and sensors. 
-            It realizes the management, control and decision-making of the broader physical world through the analysis and processing of information. Its most obvious advantage is achieving global coverage,
-             effectively addressing communication issues in signal-deficient areas. At present, SatIoT primarily focuses on transmitting text-based information. However, for a better user experience, 
-             transmitting images and audio data can provide more comprehensive and intuitive information. Limited by the satellite bandwidth, images and audio data need to be heavily compressed before transmission. However, traditional compression algorithms often result in significant blurring and distortion.</p>
-        <p class="abstract-text"> Aiming at the above problems, this paper proposes a deep learning image and audio compression transmission system based on narrowband SatIoT: </p>
+        <p class="abstract-text">The Satellite Internet of Things (SatIoT) enables integrated space-air-ground connectivity and information exchange through satellite communication networks and sensors.
+            Its most obvious advantage is achieving global coverage, effectively addressing communication issues in signal-deficient areas.
+            The SatIoT is greatly constrained by satellite communication bandwidth in terms of image and audio transmission, placing higher demands on the efficiency and adaptability of compression algorithms. 
+            Traditional compression algorithms rely on fixed mathematical transformations with limited feature extraction capabilities, making it difficult to achieve high-quality signal reconstruction at extremely low bit rates. </p>
+        <p class="abstract-text"> Aiming at the above problems, we propose deep learning-based image and audio compression algorithms</p>
         <ol class="abstract-text">
-            <li>This paper combines the advantages of Transformer and CNN in capturing global and local features of images, proposing a deep learning-based image compression algorithm that outperforms traditional image compression algorithms in both compression ratio and image reconstruction quality.</li>
-            <li>This paper presents a deep learning-based audio compression algorithm that introduces LSTM and dilated convolutions to effectively capture the long-term dependencies in time series. At the bitrate of 0.5 kbps, our method surpasses traditional algorithms, achieving superior performance in both subjective and objective evaluations.</li> 
-            <li>Implement edge computing for the algorithms and build an SatIoT system based on the Tiantong satellite.</li> 
+            <li>The image compression algorithm combines the advantages of the Transformer and CNN to capture global and local features of the image, respectively, which preserves more important details of the image and removes redundant information. 
+                It outperforms traditional image compression standards in both compression ratio and image reconstruction quality.</li>
+            <li>The audio compression algorithm introduces LSTM and dilated convolution to fully capture the long-term dependencies in time series data, achieving the bit rate of 0.5kbps. 
+                It delivers better reconstruction quality at extremely low bit rates compared to traditional audio compression algorithms. </li> 
+            <li>Additionally, we deploy the proposed algorithms on edge terminal, building a SatIoT system that enables image and audio transmission in signal-deprived areas.</li> 
         </ol>
     </section>
 
